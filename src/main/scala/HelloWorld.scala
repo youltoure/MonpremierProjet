@@ -48,6 +48,8 @@ object HelloWorld {
     var z = new Array[Int](6)
     for(i<-0 to 5){z(i)=i}
     for(j<- 0  to  (z.length-1)){println(z(j))}
+    println("Bonjour le monde")
+
     for(k <- z){println(k)}
    // println(somer)
 
