@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat
 //import java.util.Calendar
 import java.util.Date
 import scala.collection.immutable._
-import scala.collection.immutable._
+//import scala.collection.immutable._
 object HelloWorld {
   val variable2 : String= ""
   def calculsome(a:Int,b:Int):Int={
@@ -54,5 +54,44 @@ object HelloWorld {
    // println(somer)
 
 
+  }
+  def macollection(): Unit = {
+
+    val maliste = List("salut","cool","ok","jvc","premier")
+    val maliste2 : List[String] = List("salut","cool","ok")
+    maliste.foreach(l=>println(l.toUpperCase))
+
+  }
+  def collection1(): Unit = {
+    val maliste1:Seq[String] = Seq("issouf","yao","Akiss","Ada","robert","roland","mariam")
+    val k1 = maliste1.map(l=>{l.length()})
+    val k2_filter = maliste1.filter(l=>l.length>3)
+    k1.foreach(l1=>println(l1))
+    k2_filter.foreach(l2=>println(l2))
+  }
+  def collection2():Unit={
+    val p1 = Personne("TOURE","ISSOUF",10,"IVOIRE",20000)
+    val montuple = ("youl",10,p1)
+    println(montuple._3.nom)
+
+
+  }
+
+  def  collection3():Unit={
+    val  monMap : Map[String,String] =Map(
+      "cc"->"cocody",
+      "yy"-> "Poy",
+      "Abd"->"Abidjan"
+    )
+    val montuple1 = monMap.toList
+    montuple1.foreach(l=>println(l))
+  }
+  /**Les tableaux sont les seul elements qui respectent pas
+  l'immutabilite. On peut donc utiliser var dans la declaration.
+   */
+  def collection4():Unit={
+    val tab = new Array[Int](10)
+    for(i<- 0 to tab.length-1){tab(i) = i*7}
+    tab.foreach(l=>{println(l)})
   }
 }
